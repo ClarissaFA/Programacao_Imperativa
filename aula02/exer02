@@ -1,0 +1,27 @@
+let nome = "Clarissa";
+let idade = 31
+let encantadora = true
+
+// atribui valores a variáveis, com tipos diferentes
+// string, number, boolean
+//agora vamos executar:
+
+console.log(nome);
+console.log(idade);
+console.log(encantadora);
+
+//mostrar um texto que informa na tela o que é cada coisa
+// usar console.log("talCoisaEh:   ")
+// console.log (talCoisa)
+
+console.log("Nome: ");
+console.log(nome);
+console.log("idade: ");
+console.log(idade);
+console.log("É encantadora? ");
+console.log(encantadora);
+
+// exemplo de concatenação
+
+let comoElaEh = nome + " " + encantadora;
+console.log(comoElaEh);

@@ -1,0 +1,129 @@
+File
+Settings
+Extensions 
+Enabled Whether git is enabled
+
+Utilizando o Zoom Poll,  o professor valida a absorção do conteúdo pela turma levantando alguns questionamentos como:
+
+1) O que é uma estrutura de repetição?
+2) Quais são os comandos de repetição usados na programação?
+3) Quais as diferenças entre os comandos de repetição?
+
+========================
+
+ex01For.js
+
+//Aula 06 - 09/06/2021
+// Repetições - For
+// Início do contador / Limite de repetições / Modificador do Contador
+
+for(let i = 0; i<=10; i++){
+   console.log(i); 
+ }
+
+=====================
+ex02For.js
+
+//Aula 06 - 09/06/2021
+// Repetições - For
+// Início do contador / Limite de repetições / Modificador do Contador
+
+for(let i = 0; i<5; i++){
+   console.log("Olá Mundo!"); 
+ }
+
+=====================
+ex03.js
+exibirTipo(10);
+function exibirTipo(limite) {
+    for(let i = 0; i<=limite; i++){
+        if(i%2!=0)
+          console.log(i+" IMPAR");   
+      }
+}
+======================
+ex04.js
+
+exibirTipo(10);
+function exibirTipo(limite) {
+    for(let i = 0; i<=limite; i++){
+        if(i%2==0)
+          console.log("PAR");
+        else
+          console.log("IMPAR");
+      }
+}
+
+======================
+ex05.js
+for (let i = 1; i <= 10; i++) {
+    console.log("Tabuada do " + i);
+    for (let j = 1; j <= 10; j++) {
+        console.log(i + " x " + j + " = " + (i * j));
+    }
+}
+=====================
+ex05B.js
+
+for (let multiplicado = 1; multiplicado <= 10; multiplicado++) {
+ for (let multiplicando = 1; multiplicando <= 10; multiplicando++) {
+      console.log(multiplicado + "x" + multiplicando + " = " + 
+      (multiplicado * multiplicando))
+      }
+    console.log("---------------")
+}
+
+=======================
+exD1.js
+
+const idades = [5, 10, 30, 25, 15, 80, 7, 14, 4, 90];
+ 
+for (let indice = 0; indice < idades.length; indice++) {
+ console.log(idades[indice]);
+}
+/*console.log(idades)
+console.log(idades.length)*/
+
+==========================
+
+exD2.js
+
+const precoSemTaxa = [1200, 340, 560, 30400, 500, 80, 1000, 90000];
+const taxa = 1.21;
+for (let i = 0; i < precoSemTaxa.length; i++) {
+ console.log(precoSemTaxa[i] * taxa);
+}
+
+console.log(precoSemTaxa.length);
+
+=====================
+exD3.js
+
+const PrecoSemTaxa = [1200, 340, 560, 30400, 500, 7060, 400, 1000];
+const taxa= 1.21;
+let precoComTaxa = [];
+ 
+function guardarPrecoComTaxa(PrecoSemTaxa) {
+  for (let i = 0; i < PrecoSemTaxa.length; i++) {
+    precoComTaxa.push(PrecoSemTaxa[i] * taxa);
+  }
+}
+ 
+function mostrarPrecoComTaxa(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+ 
+guardarPrecoComTaxa(PrecoSemTaxa);
+mostrarPrecoComTaxa(precoComTaxa);
+
+
+
+
+
+
+
+
+
+

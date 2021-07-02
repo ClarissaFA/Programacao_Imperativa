@@ -1,0 +1,150 @@
+Roteiro Aula 07 
+Funções Avançadas
+
+SONDAGEM
+1) O que é uma arrow function?
+R: As arrow functions permitem ter um retorno implícito, que são valores retornados sem ter que usar a palavar return.
+
+2) O que é um callback?
+R: É uma função que é passada como parâmetro para outro método. 
+É esperado então que o método execute o código do argumento 
+em algum momento.
+
+3) O que é recursividade?
+É uma função que chama a si mesma até encontrar uma instrução de parar.
+
+4) O que são closures?
+É uma função interior que tem acesso a variáveis de uma função exterior.
+
+O closure tem três cadeias de escopo:
+
+O seu próprio escopo;
+O escopo externo, tendo acesso as variáveis da função exterior;
+E o acesso as variáveis globais.
+
+
+SLIDE
+https://docs.google.com/presentation/d/1QF5I_N4xBPo4vd1WG3fZmHsxsEhMG5TgP7nY4Pc46ws/edit#slide=id.gca56d90e24_0_178
+
+======INÍCIO ARROW=========
+ex01AF.js
+function somar (a, b) { return a + b }
+
+//A usamos para indicar ao JavaScript que vamos escrever uma função (substitui a palavra reservada function). =>
+
+/*Se a função tem somente uma linha de código, e esta mesma linha é a que vai exibir o retorno, não precisamos adicionar chaves, nem a palavra reservada return.*/
+
+let somar = (a, b) => a + b;
+================
+ex02AF.js
+//são anônimas
+(a, b) => a + b;
+
+let somar = (a, b) => a + b;
+
+=================
+
+ex03AF.js
+/*Usamos parênteses para indicar os parâmetros. Se nossa função não receber parâmetros, devemos deixar os parênteses vazios.*/
+
+//experiência
+let somar = (a) => a + b;
+
+let dobro = a => a * 2;
+
+========================
+
+//ex04AF.js
+
+let multiplo = (a, b) => {
+let resto = a % b; // Obtemos o resto da divisão.
+return resto == 0; // Se o resto for 0, é múltiplo
+};
+console.log(multiplo(2,2));
+if(multiplo(2,2)==true){
+    console.log("É MULTIPLO")
+} else {
+    console.log("NÃO É MULTIPLO")
+}
+
+======TÉRMINO ARROW=========
+
+======INÍCIO CALLBACK=======
+ex05CB.js
+function funcao1() {
+console.log("oi!");
+}
+function funcao2() {
+console.log("tchau!");
+}
+funcao1();
+funcao2();
+============
+ex06CB.js
+function funcao1() {
+console.log("oi!");
+funcao2(); // isso é um callback!
+}
+function funcao2() {
+console.log("tchau!");
+}
+funcao1();
+
+==============
+ex07CB.js
+
+function myDisplayer(some) {
+console.log(some);
+}
+function myCalculator(num1, num2) {
+let sum = num1 + num2;
+myDisplayer(sum);
+}
+calculador(5, 5);
+
+
+======TÉRMINO CALLBACK=======
+
+
+
+
+
+DESAFIO DO ALUNO
+https://drive.google.com/file/d/1wQ-zfDde3I1wd9h5phR-mVQLBq74iIdI/view
+
+
+desafio1.js
+let fizzBuzz = (x,y) => {
+    for(let i=1; i<=100; i++) {
+      if(i%x==0 && i%y==0) {
+        console.log('FizzBuzz')
+      } else if (i%x==0) {
+        console.log('Fizz')
+      }
+     else if (i%y==0) {
+        console.log('Buzz');
+      } else {
+        console.log(i); 
+      }
+    }
+}
+fizzBuzz(3,5)
+
+====================
+let fizzBuzz = (x,y,str1, str2) => {
+    for(let i=1; i<=100; i++) {
+      if(i%x==0 && i%y==0) {
+        console.log(str1,str2)
+      } else if (i%x==0) {
+        console.log(str1)
+      }
+     else if (i%y==0) {
+        console.log(str2);
+      } else {
+        console.log(i); 
+      }
+    }
+}
+fizzBuzz(3,5,"Digital","House")
+
+
