@@ -4,7 +4,7 @@ let opcao = [1, 2, 3, 4, 5];
 let comida = ['pipoca', 'macarrao', 'carne', 'feijao', 'brigadeiro'];
 let tempoPadrao = [10, 8, 15, 12, 8];
 
-//fiz a relação entre elas transformando em propriedades de objetos
+//fiz a relação entre elas transformando em propriedades de um objeto
 let opcoes = [
   {numero: 1,
   comida: 'pipoca',
@@ -34,7 +34,7 @@ let opcoes = [
 
 //fazer a função e colocar as condições
 let ligar = (menu, tempo) => {
-  let prato = opcoes[menu-1]     // nova variável para conferir que foi selecionada uma opção do menu e trabalhar com as condições
+  let prato = opcoes[menu-1]     // nova variável para conferir que foi selecionada uma opção do menu e trabalhar com as condições. (menu-1) é pq o índice do array começa em zero, aí o menos um arruma para se equivaler ao índice
       if (!prato) {   // condição para verificar que foi escolhido um prato que está no menu
       return 'Prato inexistente';
     } else if (tempo > (3*prato.tempoPadrao)) {   
@@ -43,7 +43,7 @@ let ligar = (menu, tempo) => {
       return 'Que pena, sua comida queimou :(';
     } else if (tempo < prato.tempoPadrao) {
       return 'Tempo insuficiente';
-    } else {return 'Prato pronto, bom apetite :)'}
+    } else {return 'Prato pronto, bom apetite :)'} 
 }
 
 // testes para conferir que está funcionando corretamente:
