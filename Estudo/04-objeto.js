@@ -9,10 +9,10 @@ let pessoa1 = {
   temCachorro: false,
   falarOi: function() {             // tem um método: uma função dentro do objeto
     console.log('Oi')
-  },
+    },
   falarTchau: function() {
     return 'Tchau'
-  }
+    }
 }
 
 //chamar a função, coloca um . entre o objeto e as prop, mas é diferente de propriedade pra método
